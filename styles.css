@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+:root {
+    --color-red: hsl(0, 78%, 62%);
+    --color-cyan: hsl(180, 62%, 55%);
+    --color-orange: hsl(34, 97%, 64%);
+    --color-blue: hsl(212, 86%, 64%);
+    --very-dark-blue: hsl(234, 12%, 34%);
+    --grayish-blue: hsl(229, 6%, 66%);
+    --very-light-gray: hsl(0, 0%, 98%);
+    font-family: 'Poppins', sans-serif;
+}
+
+*, 
+* ::before, 
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+* > h1 {
+    color: var(--very-dark-blue);
+}
+
+* > p {
+    color: var(--grayish-blue);
+}
+
+body {
+    font-size: 15px;
+    background-color: var(--very-light-gray);
+}
+
+.main-heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem auto 2rem;
+    max-width: 32rem;
+    text-align: center;
+}
+
+.main-heading h1 {
+    font-size: 2.3rem;
+}
+
+
+.light-header {
+    font-weight: 200;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.grid-inner {
+    display: grid;
+    gap: 2rem;
+}
+
+.cards-bg {
+    box-shadow: 1px 1px 20px -10px var(--very-dark-blue);
+    -webkit-box-shadow: 1px 10px 20px -10px var(--grayish-blue);
+    -moz-box-shadow: 1px 1px 20px -10px var(--very-dark-blue);
+    border-radius: 7px;
+    padding: 3rem;
+}
+
+.cards-bg p {
+    width: 95%;
+}
+
+.img-container{
+    text-align: end;
+    margin-top: 5rem;
+}
+
+.supervisor {
+    border-top: 5px solid var(--color-cyan);
+    align-self: center;
+}
+
+.team-builder {
+    border-top: 5px solid var(--color-red);
+}
+
+.karma {
+    border-top: 5px solid var(--color-orange);
+}
+
+.calculator {
+    border-top: 5px solid var(--color-blue);
+    align-self: center;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media (max-width: 425px) {
+    .main-heading h1 {
+        font-size: 1.7rem;
+    }
+    .main-heading p {
+        font-size: 1rem;
+        width: 80%;
+    }
+
+    .cards-bg {
+        padding: 1rem;
+    }
+    
+    .cards-bg h1 {
+        font-size: 1.2rem;
+    }
+
+    .grid {
+        padding: 3rem;
+    }
+
+    .cards-bg p {
+        font-size: 0.9rem;
+    }
+
+}
+
+@media (max-width:786px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
